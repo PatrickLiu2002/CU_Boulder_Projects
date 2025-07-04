@@ -1,0 +1,54 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.19848238739825555 0.31438141001040515 -0.928315178661083 1.4469575500592118
+  position -0.7705268805317452 4.844831311400217 2.6991223201438226
+  follow "e-puck"
+  followType "Pan and Tilt Shot"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Solid {
+  translation -1 0 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 0.1 1 0.5
+      }
+    }
+  ]
+  name "Obstacle 1"
+  boundingObject Box {
+    size 0.1 1 0.5
+  }
+}
+Solid {
+  translation 1 0 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 0.1 1 0.5
+      }
+    }
+  ]
+  name "Obstacle 2"
+}
+E-puck {
+  controller "e-puck_state_machine"
+}
+RectangleArena {
+  floorSize 3 3
+}
