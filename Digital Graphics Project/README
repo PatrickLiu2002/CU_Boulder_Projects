@@ -1,0 +1,38 @@
+Course Project:
+
+Patrick Liu
+CSCI4229 Fall 2024
+
+Project Review
+
+The project that will acts as a first-person flight simulator, which allows the player to fly a remote-controlled drone around a neighborhood. The neighborhood is composed of multiple objects, including trees, houses, traffic lights, streetlights, and bodies of water.  
+
+All structures are created in code, with textures used to add detail to all objects as well as the camera's overlays in the form of the Drone UI and the Help Screen.   
+
+The drone is controlled using the keyboard and mouse. The camera is controllable and zoomable using the mouse. There is a 3rd-person perspective view of the drone. 
+
+Additionally, there is a man, who can be controlled using the keyboard and mouse as well. The camera is likewise controllable and zoomable, and there is a 3rd-person perspective view of the man.
+
+There is a skybox, and day and night modes which affect the ambient light level. The scene is illuminated by streetlights when in night mode. Light-emitting textures are active when in light mode, and semi-transparent textures are used in the map. 
+
+There is a flashlight on the drone, which can illuminate the scene. There is a similar light on the man. 
+
+Collision detection is implemented in the form of bounding cylinders. This only affects the drone and man by design.
+
+Fog and anti-aliasing are implemented. 
+
+ *  Key bindings:
+ *  wasd:      Move the currently controlled object on the X/Z plane
+ *  q/e:       Rotate the currently controlled object left/right. 
+ *  r/f:       Raise/Lower the currently controlled object. Only works if controlling the Drone.
+ *  p:         Change perspective.
+ *  m/M:       Change controlled object.
+ *  g/G:       Toggle Spotlight/Flashlight. 
+ *  h/H:       Display/hide Help Menu
+ *  t/T:       Toggle Drone UI
+ *  l/L        Toggle Debug Mode
+ *  [/]:       Change displayed object in debug mode. 
+ *  Mouse:     Change camera angle
+ *  ESC        Exit
+
+Note that the drone's UI is intentionally only visible when in fullscreen and in 1st person view. 
